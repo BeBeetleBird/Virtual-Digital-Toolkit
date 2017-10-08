@@ -9,10 +9,13 @@ button {
     width: 50px ;
 }
 #control {
+/*    background-color: transparent ;*/
+/*    display: none ;*/
 /*    float: right;*/
-    z-index: 999;
+/*    z-index: 999;*/
     position: absolute ;
 /*    margin-right: 10px;*/
+    right: 0 ;
 }
 
 #toolkit {

@@ -1,13 +1,38 @@
 {
     "gate" : {
         "7476" : {
-            "name" : "MSJK FLIP FLOP" ,
-            "table" : [] ,
-            "iportLeft" : [] ,
-            "iportRight" : []
+            "name" : "MSJK FLIPFLOP" ,
+            "table" : [
+                {"input" : [0,1,0,0,0] , "output" : [1,0]} ,
+                {"input" : [1,0,0,0,0] , "output" : [0,1]} ,
+                {"input" : [1,0,0,0,0] , "output" : [0,1]} ,
+                {"input" : [1,0,0,0,0] , "output" : [0,1]} ,
+                {"input" : [1,0,0,0,0] , "output" : [0,1]} ,
+                {"input" : [1,0,0,0,0] , "output" : [0,1]}
+            ] ,
+            "iportLeft" : [
+                {"type" : "input" , "name" : "CLK 1" , "rank" : 2 , "relative" : 0} ,
+                {"type" : "input" , "name" : "PRE 1" , "rank" : 0 , "relative" : 0} ,
+                {"type" : "input" , "name" : "CLR 1" , "rank" : 1 , "relative" : 0} ,
+                {"type" : "input" , "name" : "J1" , "rank" : 3 , "relative" : 0} ,
+                {"type" : "VCC" , "name" : "VCC" , "rank" : 0 , "relative" : -1} ,
+                {"type" : "input" , "name" : "CLK 2" , "rank" : 2 , "relative" : 1} ,
+                {"type" : "input" , "name" : "PRE 2" , "rank" : 0 , "relative" : 1} ,
+                {"type" : "input" , "name" : "CLR 2" , "rank" : 1 , "relative" : 1}
+            ] ,
+            "iportRight" : [
+                {"type" : "input" , "name" : "K1" , "rank" : 4 , "relative" : 0} ,
+                {"type" : "output" , "name" : "Q1" , "rank" : 0 , "relative" : 0} ,
+                {"type" : "output" , "name" : "Q1 Bar" , "rank" : 1 , "relative" : 0} ,
+                {"type" : "GND" , "name" : "GND" , "rank" : 0 , "relative" : -1} ,
+                {"type" : "input" , "name" : "K2" , "rank" : 4 , "relative" : 1} ,
+                {"type" : "output" , "name" : "Q2" , "rank" : 0 , "relative" : 1} ,
+                {"type" : "output" , "name" : "Q2 Bar" , "rank" : 1 , "relative" : 1} ,
+                {"type" : "input" , "name" : "J2" , "rank" : 3 , "relative" : 1}
+            ]
         } ,
         "7408" : { 
-                    "name" : "AND" ,
+                    "name" : "AND 7408" ,
                     "table" : [
                         {"input" : [0,0] , "output" : [0]} ,
                         {"input" : [0,1] , "output" : [0]} ,
@@ -21,49 +46,59 @@
                     "iportRight" : ["VCC" , 13 , 12 , 11 , 10 , 9 , 8]
         } ,
         "7486" : { 
-            "name" : "XOR" ,
-            "table" : [
-                {"input" : [0,0] , "output" : [0]} ,
-                {"input" : [0,1] , "output" : [1]} ,
-                {"input" : [1,0] , "output" : [1]} ,
-                {"input" : [1,1] , "output" : [0]}
-            ] ,
-            "iport" : [ 0 , 0 , 0 , 1 , 1 , 1 , "GND" ,
-                        "VCC" , 2 , 2 , 2 , 3 , 3 , 3] ,
-
-            "iportLeft" : [ 1 , 2 , 3 , 4 , 5 , 6 , "GND" ] ,
-            "iportRight" : ["VCC" , 13 , 12 , 11 , 10 , 9 , 8]
-} ,
+                    "name" : "XOR 7486" ,
+                    "table" : [
+                        {"input" : [0,0] , "output" : [0]} ,
+                        {"input" : [0,1] , "output" : [1]} ,
+                        {"input" : [1,0] , "output" : [1]} ,
+                        {"input" : [1,1] , "output" : [0]}
+                    ] ,
+                    "iportLeft" : [
+                        {"type":"input","name":"IN 1","rank":0,"relative":0},
+                        {"type":"input","name":"IN 2","rank":1,"relative":0},
+                        {"type":"output","name":"OUTPUT","rank":0,"relative":0},
+                        {"type":"input","name":"IN 1","rank":0,"relative":1},
+                        {"type":"input","name":"IN 2","rank":1,"relative":1},
+                        {"type":"output","name":"OUTPUT","rank":0,"relative":1},
+                        {"type":"GND","name":"GND","relative":-1}
+                    ] , 
+                    "iportRight" :[ 
+                        {"type":"VCC","name":"VCC ","relative":-1} ,
+                        {"type":"input","name":"IN 1","rank":0,"relative":2},
+                        {"type":"input","name":"IN 2","rank":1,"relative":2},
+                        {"type":"output","name":"OUTPUT ","rank":0,"relative":2},
+                        {"type":"input","name":"IN 1","rank":0,"relative":3},
+                        {"type":"input","name":"IN 2","rank":1,"relative":3},
+                        {"type":"output","name":"OUTPUT ","rank":0,"relative":3}
+                    ] 
+        } ,
         "7404" : {
-                    "name" : "NOT" ,
+                    "name" : "NOT 7404" ,
                     "table" : [
                         {"input" : [0] , "output" : [1]} ,
                         {"input" : [1] , "output" : [0]}
                     ] ,
                     "iportLeft" : [
-                        {"type":"input","rank":0,"relative":0},
-                        {"type":"output","rank":0,"relative":0},
-                        {"type":"input","rank":0,"relative":1},
-                        {"type":"output","rank":0,"relative":1},
-                        {"type":"input","rank":0,"relative":2},
-                        {"type":"output","rank":0,"relative":2},
+                        {"type":"input","name":"IN 1","rank":0,"relative":0},
+                        {"type":"output","name":"IN 1","rank":0,"relative":0},
+                        {"type":"input","name":"IN 1","rank":0,"relative":1},
+                        {"type":"output","name":"IN 1","rank":0,"relative":1},
+                        {"type":"input","name":"IN 1","rank":0,"relative":2},
+                        {"type":"output","name":"IN 1","rank":0,"relative":2},
                         {"type":"GND"}
                     ] , 
-                    "iportRight" :[ 
-                        {"type":"input","rank":0,"relative":3},
-                        {"type":"output","rank":0,"relative":3},
-                        {"type":"input","rank":0,"relative":3},
-                        {"type":"output","rank":0,"relative":3},
-                        {"type":"input","rank":0,"relative":3},
-                        {"type":"output","rank":0,"relative":3},
-                        {"type":"VCC"}
-                    ] ,
-
-                    "iport" : [ 0 , 0 , 1 , 1 , 2 , 2 , "GND" ,
-                                "VCC" , 5 , 5 , 4 , 4 , 3 , 3 ]
+                    "iportRight" :[
+                        {"type":"VCC"},
+                        {"type":"input","name":"IN 1","rank":0,"relative":3},
+                        {"type":"output","name":"IN 1","rank":0,"relative":3},
+                        {"type":"input","name":"IN 1","rank":0,"relative":3},
+                        {"type":"output","name":"IN 1","rank":0,"relative":3},
+                        {"type":"input","name":"IN 1","rank":0,"relative":3},
+                        {"type":"output","name":"IN 1","rank":0,"relative":3}
+                    ]
         } ,
         "7432" : { 
-                    "name" : "OR" ,
+                    "name" : "OR 7432" ,
                     "table" : [
                         {"input" : [0,0] , "output" : [0]} ,
                         {"input" : [0,1] , "output" : [1]} ,
@@ -76,6 +111,6 @@
 
                     "iportLeft" : [ 1 , 2 , 3 , 4 , 5 , 6 , "GND" ] ,
                     "iportRight" : ["VCC" , 13 , 12 , 11 , 10 , 9 , 8]
-        }
+        } 
     }
 }

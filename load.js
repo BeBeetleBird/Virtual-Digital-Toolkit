@@ -17,9 +17,7 @@ function load_data() {
  loadJSON(function(response) {
   // Parse JSON string into object
      data_JSON = JSON.parse(response);
-     
-     
-     console.log(data_JSON);
+    //  console.log(data_JSON);
  });
 }
 
