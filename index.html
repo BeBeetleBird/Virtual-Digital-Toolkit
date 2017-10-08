@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Electronics Digital Toolkit</title>
+       <link rel="stylesheet" href="display.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.3/svg.min.js"></script> 
+<!--        <script src="svg.easing.min.js"></script>-->
+<!--        <script src="svg.js"></script>-->
+    </head>
+    <body>
+        <div id="toolkit"></div>
+        <div id="control">
+            <div id="bar">
+                <span>IC Gates</span>
+                <button class="icgate" draggable="true" ondragend="CreateCircuit('7408')">AND</button>
+                <button class="icgate" draggable="true" ondragend="CreateCircuit('7432')">OR</button>
+                <button class="icgate" draggable="true" ondragend="CreateCircuit('7404')">NOT</button>
+                <button class="icgate" draggable="true" ondragend="CreateCircuit('7486')">XOR</button>
+            </div>
+            
+        </div>
+        <script src="../electronictoolkit/load.js"></script>
+        <script src="../electronictoolkit/main.js"></script>
+    </body>
+</html>

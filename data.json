@@ -1,0 +1,81 @@
+{
+    "gate" : {
+        "7476" : {
+            "name" : "MSJK FLIP FLOP" ,
+            "table" : [] ,
+            "iportLeft" : [] ,
+            "iportRight" : []
+        } ,
+        "7408" : { 
+                    "name" : "AND" ,
+                    "table" : [
+                        {"input" : [0,0] , "output" : [0]} ,
+                        {"input" : [0,1] , "output" : [0]} ,
+                        {"input" : [1,0] , "output" : [0]} ,
+                        {"input" : [1,1] , "output" : [1]}
+                    ] ,
+                    "iport" : [ 0 , 0 , 0 , 1 , 1 , 1 , "GND" ,
+                                "VCC" , 2 , 2 , 2 , 3 , 3 , 3] ,
+
+                    "iportLeft" : [ 1 , 2 , 3 , 4 , 5 , 6 , "GND" ] ,
+                    "iportRight" : ["VCC" , 13 , 12 , 11 , 10 , 9 , 8]
+        } ,
+        "7486" : { 
+            "name" : "XOR" ,
+            "table" : [
+                {"input" : [0,0] , "output" : [0]} ,
+                {"input" : [0,1] , "output" : [1]} ,
+                {"input" : [1,0] , "output" : [1]} ,
+                {"input" : [1,1] , "output" : [0]}
+            ] ,
+            "iport" : [ 0 , 0 , 0 , 1 , 1 , 1 , "GND" ,
+                        "VCC" , 2 , 2 , 2 , 3 , 3 , 3] ,
+
+            "iportLeft" : [ 1 , 2 , 3 , 4 , 5 , 6 , "GND" ] ,
+            "iportRight" : ["VCC" , 13 , 12 , 11 , 10 , 9 , 8]
+} ,
+        "7404" : {
+                    "name" : "NOT" ,
+                    "table" : [
+                        {"input" : [0] , "output" : [1]} ,
+                        {"input" : [1] , "output" : [0]}
+                    ] ,
+                    "iportLeft" : [
+                        {"type":"input","rank":0,"relative":0},
+                        {"type":"output","rank":0,"relative":0},
+                        {"type":"input","rank":0,"relative":1},
+                        {"type":"output","rank":0,"relative":1},
+                        {"type":"input","rank":0,"relative":2},
+                        {"type":"output","rank":0,"relative":2},
+                        {"type":"GND"}
+                    ] , 
+                    "iportRight" :[ 
+                        {"type":"input","rank":0,"relative":3},
+                        {"type":"output","rank":0,"relative":3},
+                        {"type":"input","rank":0,"relative":3},
+                        {"type":"output","rank":0,"relative":3},
+                        {"type":"input","rank":0,"relative":3},
+                        {"type":"output","rank":0,"relative":3},
+                        {"type":"VCC"}
+                    ] ,
+
+                    "iport" : [ 0 , 0 , 1 , 1 , 2 , 2 , "GND" ,
+                                "VCC" , 5 , 5 , 4 , 4 , 3 , 3 ]
+        } ,
+        "7432" : { 
+                    "name" : "OR" ,
+                    "table" : [
+                        {"input" : [0,0] , "output" : [0]} ,
+                        {"input" : [0,1] , "output" : [1]} ,
+                        {"input" : [1,0] , "output" : [1]} ,
+                        {"input" : [1,1] , "output" : [1]}
+                    ] ,
+                    
+                    "iport" : [ 0 , 0 , 0 , 1 , 1 , 1 , "GND" ,
+                                "VCC" , 2 , 2 , 2 , 3 , 3 , 3] ,
+
+                    "iportLeft" : [ 1 , 2 , 3 , 4 , 5 , 6 , "GND" ] ,
+                    "iportRight" : ["VCC" , 13 , 12 , 11 , 10 , 9 , 8]
+        }
+    }
+}
