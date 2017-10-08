@@ -39,11 +39,24 @@
                         {"input" : [1,0] , "output" : [0]} ,
                         {"input" : [1,1] , "output" : [1]}
                     ] ,
-                    "iport" : [ 0 , 0 , 0 , 1 , 1 , 1 , "GND" ,
-                                "VCC" , 2 , 2 , 2 , 3 , 3 , 3] ,
-
-                    "iportLeft" : [ 1 , 2 , 3 , 4 , 5 , 6 , "GND" ] ,
-                    "iportRight" : ["VCC" , 13 , 12 , 11 , 10 , 9 , 8]
+                    "iportLeft" : [
+                        {"type":"input","name":"IN 1","rank":0,"relative":0},
+                        {"type":"input","name":"IN 2","rank":1,"relative":0},
+                        {"type":"output","name":"OUTPUT","rank":0,"relative":0},
+                        {"type":"input","name":"IN 1","rank":0,"relative":1},
+                        {"type":"input","name":"IN 2","rank":1,"relative":1},
+                        {"type":"output","name":"OUTPUT","rank":0,"relative":1},
+                        {"type":"GND","name":"GND","relative":-1}
+                    ] , 
+                    "iportRight" :[ 
+                        {"type":"VCC","name":"VCC ","relative":-1} ,
+                        {"type":"input","name":"IN 1","rank":0,"relative":2},
+                        {"type":"input","name":"IN 2","rank":1,"relative":2},
+                        {"type":"output","name":"OUTPUT ","rank":0,"relative":2},
+                        {"type":"input","name":"IN 1","rank":0,"relative":3},
+                        {"type":"input","name":"IN 2","rank":1,"relative":3},
+                        {"type":"output","name":"OUTPUT ","rank":0,"relative":3}
+                    ] 
         } ,
         "7486" : { 
                     "name" : "XOR 7486" ,
@@ -85,10 +98,10 @@
                         {"type":"output","name":"IN 1","rank":0,"relative":1},
                         {"type":"input","name":"IN 1","rank":0,"relative":2},
                         {"type":"output","name":"IN 1","rank":0,"relative":2},
-                        {"type":"GND"}
+                        {"type":"GND","name":"GND","relative":-1}
                     ] , 
                     "iportRight" :[
-                        {"type":"VCC"},
+                        {"type":"VCC","name":"VCC ","relative":-1} ,
                         {"type":"input","name":"IN 1","rank":0,"relative":3},
                         {"type":"output","name":"IN 1","rank":0,"relative":3},
                         {"type":"input","name":"IN 1","rank":0,"relative":3},
@@ -106,11 +119,24 @@
                         {"input" : [1,1] , "output" : [1]}
                     ] ,
                     
-                    "iport" : [ 0 , 0 , 0 , 1 , 1 , 1 , "GND" ,
-                                "VCC" , 2 , 2 , 2 , 3 , 3 , 3] ,
-
-                    "iportLeft" : [ 1 , 2 , 3 , 4 , 5 , 6 , "GND" ] ,
-                    "iportRight" : ["VCC" , 13 , 12 , 11 , 10 , 9 , 8]
+                    "iportLeft" : [
+                        {"type":"input","name":"IN 1","rank":0,"relative":0},
+                        {"type":"input","name":"IN 2","rank":1,"relative":0},
+                        {"type":"output","name":"OUTPUT","rank":0,"relative":0},
+                        {"type":"input","name":"IN 1","rank":0,"relative":1},
+                        {"type":"input","name":"IN 2","rank":1,"relative":1},
+                        {"type":"output","name":"OUTPUT","rank":0,"relative":1},
+                        {"type":"GND","name":"GND","relative":-1}
+                    ] , 
+                    "iportRight" :[ 
+                        {"type":"VCC","name":"VCC ","relative":-1} ,
+                        {"type":"input","name":"IN 1","rank":0,"relative":2},
+                        {"type":"input","name":"IN 2","rank":1,"relative":2},
+                        {"type":"output","name":"OUTPUT ","rank":0,"relative":2},
+                        {"type":"input","name":"IN 1","rank":0,"relative":3},
+                        {"type":"input","name":"IN 2","rank":1,"relative":3},
+                        {"type":"output","name":"OUTPUT ","rank":0,"relative":3}
+                    ] 
         } 
     }
 }
