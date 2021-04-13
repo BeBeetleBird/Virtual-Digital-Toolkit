@@ -1,4 +1,4 @@
-# Virtual-Digital-Toolkit
+# virtual-digital-toolkit
 
 Have a look : http://www.wulcat.com/apps/electronictoolkit/
 
